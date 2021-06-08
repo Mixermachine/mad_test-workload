@@ -33,4 +33,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: mixermachine/mad_test-workload:latest
+          tags: mixermachine/mad_test-workload:1.0.0
