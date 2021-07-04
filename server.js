@@ -32,7 +32,7 @@ server.get('/cyclictest', ((request, reply) => {
 }));
 
 server.get('/', ((request, reply) => {
-    reply.send("Server up")
+    reply.send('Server up')
 }))
 server.listen(3000, (err, _) => {
     if (err) {
