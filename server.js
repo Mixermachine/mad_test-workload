@@ -41,9 +41,9 @@ server.listen(3000, (err, _) => {
     }
 });
 
-function composeResponse(response, code, stdout, stderr) {
+function composeResponse(result, code, stdout, stderr) {
     return {
-        result: 'error',
+        result: result,
         code: code,
         stdout: stdout.join('\n'),
         stderr: stderr.join('\n')
