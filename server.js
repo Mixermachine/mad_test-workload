@@ -34,7 +34,10 @@ server.get('/cyclictest', ((request, reply) => {
 server.get('/', ((request, reply) => {
     reply.send('Server up')
 }))
-server.listen(3000, (err, _) => {
+server.listen(3500, '0.0.0.0', (err, msg) => {
+    if (msg) {
+        console.info(msg);
+    }
     if (err) {
         console.error(err);
         process.exit(1);
