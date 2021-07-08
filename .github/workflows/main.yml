@@ -33,4 +33,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: mixermachine/ark8s-test-workload:1.0.5
+          tags: mixermachine/ark8s-test-workload:1.0.6
