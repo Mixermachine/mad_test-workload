@@ -4,7 +4,7 @@ const {spawn} = require('child_process');
 
 const fastify = require('fastify');
 
-const cyclictestStandardArguments = ['-l5000', '-i1000', '-h10000'];
+const cyclictestStandardArguments = ['-l10000', '-i1000', '-h10000'];
 
 // initialize fastify
 const server = fastify();
