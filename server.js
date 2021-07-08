@@ -10,14 +10,14 @@ const cyclictestStandardArguments = ['-l10000', '-i1000', '-h10000'];
 const server = fastify();
 
 server.get('/cyclictest', ((request, reply) => {
-    const useNormalScheduler = request.query.non_rt;
+    const useNormalScheduler = request.query.non_rt === 'true';
 
     const runConfig = [...cyclictestStandardArguments];
     if (useNormalScheduler) {
         runConfig.push('--policy=normal');
     } else {
-        runConfig.push('-p80')
-        runConfig.push('--policy=fifo')
+        runConfig.push('-p80');
+        runConfig.push('--policy=fifo');
     }
 
     const command = spawn('cyclictest', runConfig);
