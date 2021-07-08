@@ -12,7 +12,7 @@ const server = fastify();
 server.get('/cyclictest', ((request, reply) => {
     const useNormalScheduler = request.query.non_rt;
 
-    const command = spawn('cyclictest', [...cyclictestStandardArguments, useNormalScheduler ? '--policy=normal' : '-p80']);
+    const command = spawn('cyclictest', [...cyclictestStandardArguments, useNormalScheduler ? '--policy=normal' : '-p80 --policy=fifo'.split(' ')].flat());
     const stdout = [];
     const stderr = [];
 
